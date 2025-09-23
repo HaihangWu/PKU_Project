@@ -20,7 +20,7 @@ state_dict=torch.load(checkpoint_path, map_location=device)
 model.load_state_dict(state_dict)
 model.to(device)  # move model and all its parameters to device
 
-# Load and preprocess example images (replace with your own image paths)
+# Load and preprocess example images (replace with your own image path)
 #image_names = ["/root/data/NRGBD/breakfast_room/images/img0.png"]
 image_dir="/root/autodl-tmp/data/NRGBD/breakfast_room/images/" #"/root/autodl-tmp/PKU_Project/VGGT/examples/llff_fern/images/" #
 image_names = [os.path.join(image_dir,f) for f in os.listdir(image_dir) if f.lower().endswith((".png", ".jpg", ".jpeg"))]
